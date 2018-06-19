@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.9.14" id="ResourceRegistry"
+             SeparateXMLFiles="false" Package="model" ClientType="Generic">
+  <pageMap>
+    <page path="v1_dept" usageId="v1_AppModule_DeptVoResources"/>
+    <page path="v2_countries" usageId="v2_AppModule_CountriesVoResources"/>
+  </pageMap>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+  <pageDefinitionUsages>
+    <page id="v1_AppModule_DeptVoResources" path="model.rest.v1.AppModule_DeptVoResources"/>
+    <page id="v2_AppModule_CountriesVoResources" path="model.rest.v2.AppModule_CountriesVoResources"/>
+  </pageDefinitionUsages>
+</Application>

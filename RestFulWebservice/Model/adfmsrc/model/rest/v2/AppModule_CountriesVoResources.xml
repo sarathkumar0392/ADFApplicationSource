@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="AppModule_CountriesVoResources"
+                Package="model.rest.v2" usageMode="RESTClient">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CountriesVo" RangeSize="5" DataControl="AppModuleDataControl" id="CountriesVoIter"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="CountriesVoIter" id="countries" AccessorFolder="Always">
+      <nodeDefinition DefName="ViewObject.CountriesVo" Name="ViewObject.CountriesVo"/>
+    </tree>
+  </bindings>
+</pageDefinition>
